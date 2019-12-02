@@ -22,20 +22,4 @@ def PdfReader(number,pdf):
     PdfReader(0)
 
 
-#importing the module
-from PyPDF2 import PdfFileReader,PdfFileWriter
-
-def PdfReader(number,pdf,new_pdf):
-  #Original pdf to read
-
-  with open(pdf, 'rb') as textpdf: # open the pdf (will close automatically)
-      reader = PdfFileReader(textpdf) # create the reader
-      page = reader.getPage(number) # grab the page we want
-      with open(new._pdf,"wb") as f: # create the new pdf
-        writer = PdfFileWriter() # create the pdf writer
-        writer.addPage(page) # add the page to the buffer
-        writer.write(f) # write the new pdf to the filestream
-
-if __name__ == "__main__": # magic to run the method automatically
-    PdfReader(0) # call the code we wrote, get the first page
 
